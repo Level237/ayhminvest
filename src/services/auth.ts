@@ -23,7 +23,7 @@ export const authService=createApi({
                 // Ici, vous pouvez personnaliser la réponse d'erreur
                 console.log(baseQueryResult)
                  if(baseQueryResult.status===400){
-                    return { error: "l'email et le mot de passe ne peut pas etre vide" };
+                    return { error: "l'email ou le mot de passe sont incorrect" };
                 }else if(baseQueryResult.status===500){
                     return { error: "l'email out le mot de passe sont incorrect" };
                 }
