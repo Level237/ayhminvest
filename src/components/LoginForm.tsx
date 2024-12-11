@@ -8,19 +8,19 @@ export default function LoginForm() {
           <img className="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo"/>
           AYHMINVEST   
       </a>
-      <div className="w-full  rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
-          <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+      <div className="w-full rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
+          <div className="p-6 space-y-4   md:space-y-6 sm:p-8">
               <h1 className="text-xl font-bold leading-tight text-center tracking-tight  md:text-2xl text-white">
                   Connexion
               </h1>
               <form className="space-y-4 md:space-y-6" action="#">
                   <div className='flex items-start flex-col'>
                       <label  className="block mb-2 text-sm font-medium text-white">Numéro de téléphone</label>
-                      <input type="text" name="email" id="email" className=" border rounded-lg   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Entrez votre numéro de téléphone" required/>
+                      <input type="text" name="email" id="email" className=" border rounded-lg   block w-full p-3 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Entrez votre numéro de téléphone" required/>
                   </div>
                   <div className='flex items-start flex-col'>
                       <label  className="block mb-2 text-sm font-medium text-white">Mot de passe</label>
-                      <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe"  className=" border rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 dark:text-white focus:ring-blue-500 focus:border-blue-500"  required/>
+                      <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe"  className=" border rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3 bg-gray-700 border-gray-600 placeholder-gray-400 dark:text-white focus:ring-blue-500 focus:border-blue-500"  required/>
                   </div>
                   <div className="flex items-center justify-between">
                       <div className="flex items-start">
