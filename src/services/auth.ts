@@ -29,7 +29,7 @@ export const authService=createApi({
                 }
                 else {
                     console.log("sdhgs")
-                  return { error: baseQueryResult.data };
+                  return { error: baseQueryResult.status };
                 }
               },
         },
