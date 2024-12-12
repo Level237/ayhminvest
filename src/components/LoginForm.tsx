@@ -69,7 +69,7 @@ const handlePwdInput=(e:any)=>setPwd(e.target.value)
                       </div>
                       <a href="#" className="text-sm font-medium hover:underline text-gray-300">Mot de passe oublié?</a>
                   </div>
-                  <button disabled={isLoading || user==="" || pwd===""} type="submit" className={`w-full ${isLoading ||user===""||pwd==="" ? "bg-blue-400" : ""} text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800`}>{isLoading ? "Loading..." : "Connexion" }</button>
+                  <button disabled={isLoading || user==="" || pwd===""} type="submit" className={`w-full ${isLoading ||user===""||pwd==="" ? "bg-blue-400 opacity-35" : ""} text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800`}>{isLoading ? "Loading..." : "Connexion" }</button>
                  
               </form>
           </div>
