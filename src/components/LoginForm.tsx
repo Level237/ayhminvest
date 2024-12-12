@@ -30,7 +30,7 @@ export default function LoginForm() {
           
           setUser('')
           setPwd('')
-          navigate('/dashboard')
+          navigate('/pricing')
 
   }
 
@@ -56,7 +56,7 @@ const handlePwdInput=(e:any)=>setPwd(e.target.value)
                   </div>
                   <div className='flex items-start flex-col'>
                       <label  className="block mb-2 text-sm font-medium text-white">Mot de passe</label>
-                      <input name="password" type="password" onChange={handlePwdInput}  id="password" placeholder="Entrez votre mot de passe"  className=" border rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3 bg-gray-700 border-gray-600 placeholder-gray-400 dark:text-white focus:ring-blue-500 focus:border-blue-500"  />
+                      <input name="password" type="password" onChange={handlePwdInput}  id="password" placeholder="Entrez votre mot de passe"  className=" border rounded-lg focus:ring-primary-600 text-white focus:border-primary-600 block w-full p-3 bg-gray-700 border-gray-600 placeholder-gray-400 dark:text-white focus:ring-blue-500 focus:border-blue-500"  />
                   </div>
                   <div className="flex items-center justify-between">
                       <div className="flex items-start">
