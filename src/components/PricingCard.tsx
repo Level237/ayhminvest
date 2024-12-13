@@ -16,11 +16,11 @@ export default function PricingCard() {
               <h3 className="mb-4 text-2xl font-semibold">Palier 1</h3>
               <p className="font-light sm:text-md text-gray-400">Best option for personal use & for your next project.</p>
               <div className="flex justify-center items-baseline my-8">
-                  <span className="mr-2 text-2xl font-extrabold">50-100 €</span>
+                  <span className="mr-2 text-2xl font-extrabold">1-100 €</span>
                   
               </div>
              
-            <Link to="/payment/with/stripe/?min=50&max=100">
+            <Link to="/payment/with/stripe/?min=1&max=100">
             
               <a className="text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Payer maintenant</a>
               </Link>

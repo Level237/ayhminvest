@@ -3,6 +3,8 @@ import { loadStripe } from '@stripe/stripe-js';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { usePayMutation } from '@/services/payment';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import Loader from './Loader';
+import Congratulation from './Congratulation';
 
 // Remplacez 'your_public_key' par votre clé publique Stripe
 
@@ -57,18 +59,22 @@ const PaymentForm = () => {
     };
 
     return (
-        <div className="w-[50%] bg-gray-800 mx-auto px-8 py-12  rounded-lg shadow-md">
-            <h2 className="text-2xl text-white font-bold mb-4">Formulaire de Paiement</h2>
+       <>
+       {!isLoading && !successMessage &&  <div className="w-[30%] bg-gray-800 mx-auto px-8 py-12  rounded-lg shadow-md">
+            
+            <h2 className="text-2xl text-white text-center font-bold mb-4">Formulaire de Paiement</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
+
+                {!isLoading && <div className='mb-4 flex flex-col gap-4'>
                 <div>
-                    <label className="block text-sm font-medium text-white" htmlFor="amount">Montant</label>
+                    <label className="block mb-2 text-sm font-medium text-white" htmlFor="amount">Montant</label>
                     <input
                         type="number"
                         id="amount"
                         name="amount"
                         value={amount}
                         onChange={(e:any) => setAmount(e.target.value)}
-                        placeholder="Montant en dollars"
+                        placeholder="Montant en euros"
                         min={min}
                         max={max}
                         required
@@ -76,20 +82,28 @@ const PaymentForm = () => {
                     />
                 </div>
                 <div className='text-white'>
-                    <label className="block text-sm font-medium text-white">Informations de carte</label>
+                    <label className="block mb-2 text-sm font-medium text-white">Informations de carte</label>
                     <CardElement options={{ style:{base:{color:"#FFF"}} }}  className="mt-1 p-4 border border-gray-300 placeholder:text-white bg-gray-700 text-transparent text-white rounded-md" />
                 </div>
+                </div>}
+                
+                
                 <button
                     type="submit"
                     disabled={!stripe}
-                    className="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition duration-200"
+                    className={`w-full mt-6 ${isLoading && "bg-blue-400 opacity-35"} bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition duration-200`}
                 >
-                    Payer
+                    {isLoading ? "Veuillez patientez" : "Payer"}
                 </button>
                 {errorMessage && <div className="text-red-500">{errorMessage}</div>}
-                {successMessage && <div className="text-green-500">{successMessage}</div>}
+                
             </form>
         </div>
+        
+        }
+        {successMessage && <Congratulation/>}
+        {isLoading && <Loader/>}
+       </>
     );
 };
 

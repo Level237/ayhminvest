@@ -15,7 +15,7 @@ export default function PricingPage() {
   }
   return (
     <>
-      <section className='bg-gray-900 h-[100%]'>
+      <section className='bg-gray-900 h-[100vh] max-sm:h-[100%]'>
         <PricingCard/>
 
         <div className='fixed bottom-8  right-8'>
