@@ -83,11 +83,9 @@ const PaymentForm = () => {
                 </div>
                 <div className='text-white'>
                     <label className="block mb-2 text-sm font-medium text-white">Informations de carte</label>
-                    <CardElement options={{ style:{base:{color:"#FFF"}} }}  className="mt-1 p-4 border border-gray-300 placeholder:text-white bg-gray-700 text-transparent text-white rounded-md" />
+                    <CardElement options={{ style:{base:{color:"#FFF"}},hidePostalCode:true }}  className="mt-1 p-4 border border-gray-300 placeholder:text-white bg-gray-700 text-transparent text-white rounded-md" />
                 </div>
                 </div>}
-                
-                
                 <button
                     type="submit"
                     disabled={!stripe}
