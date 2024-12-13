@@ -377,7 +377,7 @@ export const PalierData=[
             },
         ]
     },
-    {
+    {   
         id:"p5",
         data:[
             {
