@@ -6,7 +6,7 @@ import { baseQueryWithReauth } from "./baseQueryWithReauth";
 export const PaymentService=createApi({
     baseQuery:baseQueryWithReauth,
     reducerPath:"clientService",
-    tagTypes:['Clients'],
+    tagTypes:['Pay'],
     endpoints:builder=>({
 
         pay:builder.mutation({
@@ -15,11 +15,17 @@ export const PaymentService=createApi({
                 method:"POST",
                 body:formData,
                 
-        })
         }),
+        invalidatesTags:['Pay']
+        }),
+        getPrice:builder.query({
+            query:()=>'/api/v1/sum',
+            providesTags: ['Pay'],
+    })
     }),
 })
 
 export const {
-usePayMutation
+usePayMutation,
+useGetPriceQuery
 }=PaymentService

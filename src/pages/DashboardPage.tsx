@@ -1,4 +1,5 @@
 import { useLogoutMutation } from '@/services/auth';
+import { useGetPriceQuery } from '@/services/payment';
 import { logoutUser } from '@/store/authSlice';
 import { LogOut } from 'lucide-react'
 import React from 'react'
@@ -7,12 +8,14 @@ import { Link } from 'react-router-dom';
 
 export default function DashboardPage() {
     const [logout]=useLogoutMutation()
+    const {data,isLoading}=useGetPriceQuery('Pay')
   const dispatch=useDispatch();
   const handleLogout=async()=>{
     await logout();
     dispatch(logoutUser())
 
   }
+  console.log(data)
   return (
     <section className='bg-gray-900  h-[100vh] max-sm:h-[100%]'>
         <div className='flex flex-col gap-12 justify-center items-center'>
@@ -20,7 +23,7 @@ export default function DashboardPage() {
             <div className='bg-gray-700 flex flex-col items-center p-6 rounded-xl'>
                 <h2 className='text-white text-lg'>Solde Principale</h2>
                 <div>
-                <h2 className='text-blue-600 text-3xl font-bold'>50 Euros</h2>
+                <h2 className='text-blue-600 text-3xl font-bold'>{!isLoading && data} Euros</h2>
                 </div>
             </div>
             <div>
