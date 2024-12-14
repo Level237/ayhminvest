@@ -1,4 +1,6 @@
 import { PrivateRoute } from "@/pages/Auth/PrivateRoute";
+import AuthenticatePage from "@/pages/AuthenticatePage";
+import DashboardPage from "@/pages/DashboardPage";
 import LoginPage from "@/pages/LoginPage";
 import PaymentPage from "@/pages/PaymentPage";
 import PricingPage from "@/pages/PricingPage";
@@ -23,6 +25,12 @@ export const routes=createBrowserRouter([
         },{
             path:"/payment/with/stripe",
             element:<PaymentPage/>
+        },{
+            path:"/authenticate",
+            element:<AuthenticatePage/>
+        },{
+            path:'/dashboard',
+            element:<DashboardPage/>
         }
     ]
 }

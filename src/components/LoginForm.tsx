@@ -30,7 +30,8 @@ export default function LoginForm() {
           
           setUser('')
           setPwd('')
-          navigate('/pricing')
+          
+          navigate('/authenticate')
 
   }
 
