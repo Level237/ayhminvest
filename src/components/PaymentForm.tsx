@@ -60,7 +60,7 @@ const PaymentForm = () => {
 
     return (
        <>
-       {!isLoading && !successMessage &&  <div className="w-[30%] bg-gray-800 mx-auto px-8 py-12  rounded-lg shadow-md">
+       {!isLoading && !successMessage &&  <div className="w-[30%] max-sm:w-[90%] bg-gray-800 mx-auto px-8 py-12  rounded-lg shadow-md">
             
             <h2 className="text-2xl text-white text-center font-bold mb-4">Formulaire de Paiement</h2>
             <form onSubmit={handleSubmit} className="space-y-4">

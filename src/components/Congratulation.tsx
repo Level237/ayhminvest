@@ -12,7 +12,7 @@ export default function Congratulation() {
 </div>
 
 
-<h5 className="mb-2 text-xl font-bold text-white">Félicitation votre paiement à bien été effectué avec succéss</h5>
+<h5 className="mb-2 text-xl font-bold text-white">Félicitation votre paiement à bien été effectué avec success</h5>
 
 
 <Link to="/pricing">
