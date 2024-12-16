@@ -2,7 +2,6 @@ import { useLogoutMutation } from '@/services/auth';
 import { useGetPriceQuery } from '@/services/payment';
 import { logoutUser } from '@/store/authSlice';
 import { LogOut } from 'lucide-react'
-import React from 'react'
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -11,13 +10,13 @@ export default function DashboardPage() {
     const {data,isLoading}=useGetPriceQuery('Pay')
   const dispatch=useDispatch();
   const handleLogout=async()=>{
-    await logout();
+    await logout("Auth");
     dispatch(logoutUser())
 
   }
   console.log(data)
   return (
-    <section className='bg-gray-900  h-[100vh] max-sm:h-[100%]'>
+    <section className='bg-gray-900  h-[100vh]'>
         <div className='flex flex-col gap-12 justify-center items-center'>
         <h2 className='text-white text-2xl mt-12 font-bold'>dashboard Administrateur</h2>
             <div className='bg-gray-700 flex flex-col items-center p-6 rounded-xl'>

@@ -1,6 +1,6 @@
 import { adjustUsedToken, authTokenChange, logoutUser } from "@/store/authSlice";
 import { baseQuery } from "./baseQuery";
-import { BaseQueryFn, FetchArgs, FetchBaseQueryError, RootState } from "@reduxjs/toolkit/query";
+import { BaseQueryFn, FetchArgs, FetchBaseQueryError } from "@reduxjs/toolkit/query";
 
 export const baseQueryWithReauth: BaseQueryFn<
   string | FetchArgs,

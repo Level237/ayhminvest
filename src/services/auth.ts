@@ -19,7 +19,7 @@ export const authService=createApi({
                 body:credentials
             }),
             
-            transformErrorResponse: (baseQueryResult, error, arg) => {
+            transformErrorResponse: (baseQueryResult) => {
                 // Ici, vous pouvez personnaliser la réponse d'erreur
                 console.log(baseQueryResult)
                  if(baseQueryResult.status===400){
@@ -46,7 +46,7 @@ export const authService=createApi({
            
                 query:()=>'/api/v1/user/me',
                 providesTags: ['Auth'],
-                transformErrorResponse: (baseQueryResult, error, arg) => {
+                transformErrorResponse: (baseQueryResult) => {
                     // Ici, vous pouvez personnaliser la réponse d'erreur
                     console.log("dd")
                      if(baseQueryResult.status===401){

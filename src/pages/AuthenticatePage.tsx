@@ -1,6 +1,6 @@
 import Loader from '@/components/Loader'
 import { useGetUserQuery } from '@/services/auth'
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export default function AuthenticatePage() {

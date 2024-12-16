@@ -2,14 +2,13 @@ import PricingCard from '@/components/PricingCard'
 import { useLogoutMutation } from '@/services/auth'
 import { logoutUser } from '@/store/authSlice'
 import { LogOut } from 'lucide-react'
-import React from 'react'
 import { useDispatch } from 'react-redux'
 
 export default function PricingPage() {
   const [logout]=useLogoutMutation()
   const dispatch=useDispatch();
   const handleLogout=async()=>{
-    await logout();
+    await logout("Auth");
     dispatch(logoutUser())
 
   }

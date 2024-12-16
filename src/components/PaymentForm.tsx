@@ -34,7 +34,7 @@ const PaymentForm = () => {
         const { token, error } = await stripe.createToken(cardElement);
 
         if (error) {
-            setErrorMessage(error.message);
+            setErrorMessage(error?.message);
             setSuccessMessage('');
         } else {
             // Envoyer le token au serveur

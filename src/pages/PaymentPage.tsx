@@ -13,7 +13,7 @@ export default function PaymentPage() {
   const [logout]=useLogoutMutation()
   const dispatch=useDispatch();
   const handleLogout=async()=>{
-    await logout();
+    await logout("Auth");
     dispatch(logoutUser())
 
   }

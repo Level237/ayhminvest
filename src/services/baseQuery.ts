@@ -1,10 +1,10 @@
 import { fetchBaseQuery } from "@reduxjs/toolkit/query";
 
 export const baseQuery=fetchBaseQuery({
-    baseUrl:"http://127.0.0.1:8000",
+    baseUrl:"https://api-ayhminvest.kensoh-clt.com",
     credentials:"same-origin",
     
-    prepareHeaders:(headers,{getState})=>{
+    prepareHeaders:(headers,{getState}:{getState:any})=>{
         headers.set('Access-Control-Allow-Origin', '*')
         headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
         
